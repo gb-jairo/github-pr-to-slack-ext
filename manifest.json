@@ -16,8 +16,7 @@
   "permissions": [
     "tabs",
     "storage",
-    "http://*/*",
-    "https://*/*"
+    "https://github.com/*/*/pull/*"
   ],
   "options_ui": {
     "page": "options.html"
@@ -25,8 +24,7 @@
   "content_scripts": [
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "https://github.com/*/*/pull/*"
       ],
       "js": [
         "scripts/contentscript.js"
@@ -34,15 +32,7 @@
       "run_at": "document_end",
       "all_frames": false
     }
-  ],
-  "browser_action": {
-    "default_icon": {
-      "19": "icons/icon-19.png",
-      "38": "icons/icon-38.png"
-    },
-    "default_title": "Extension Boilerplate",
-    "default_popup": "popup.html"
-  }
+  ]
 }
 
 
